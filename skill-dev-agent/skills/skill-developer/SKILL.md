@@ -27,16 +27,16 @@ Skill 规范（frontmatter 字段、目录约定、渐进式披露）以 skill-c
 
 4. 开发正文与内容
    - SKILL.md 正文写面向执行的简明操作指南（建议 <500 行），细节下沉到子文件。
-   - 确定性重逻辑写到 scripts/，脚本须能独立运行。
+   - 确定性重逻辑写到 scripts/，脚本须能独立运行，确保在 macOS、Windows、Linux 上均可执行（不硬编码路径分隔符，不依赖平台独有命令）。
    - 大段说明、示例、文档写到 references/。
    - 静态数据/配置写到 assets/。
 
 5. 查证与试跑
-   - 涉及外部库或陌生领域时，用可用的检索工具查一手资料，沉淀进 references/。
+   - 涉及外部库或陌生领域时，用 Context7（resolve-library-id / query-docs）查一手资料，用 Fetch 抓取网页，沉淀进 references/。优先一手资料，不凭记忆编造。
    - 在工作空间实际运行 scripts/ 验证可执行性。
 
 6. 自检交付
-   - 核对：frontmatter 完整（name/description 非空）、正文精简、脚本可跑、命名一致、无模板占位符。
+   - 核对：frontmatter 完整（name/description 非空）、正文精简、脚本可跑且跨平台兼容、命名一致、无模板占位符。
    - 把所有变更真实写入工作空间，并给出文件树总览 + 变更摘要。
 
 ## 原则
