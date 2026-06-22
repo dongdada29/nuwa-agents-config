@@ -1,0 +1,7 @@
+{
+  "name": "nuwa-agents-config",
+  "version": "0.2.0",
+  "private": true,
+  "description": "女娲智能体平台 Agent 编排配置 — 技能开发 Agent (2844) 和插件开发 Agent (2845)",
+  "license": "MIT"
+}
